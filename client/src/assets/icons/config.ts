@@ -1,6 +1,7 @@
 import { Logo } from "./logo";
 import { MenuIcon } from "./menu-icon";
 import { CancelIcon } from "./cancel-icon";
+import { GoogleIcon } from "./google-icon";
 import { SearchIcon } from "./search-Icon";
 import { HomeIcon } from "./home-icon";
 import { ProjectIcon } from "./project-icon";
@@ -13,6 +14,7 @@ export const ICON_NAMES = {
   logo: "logo",
   menu: "menu",
   cancel: "cancel",
+  google: "google",
   search: "search",
   home: "home",
   project: "project",
@@ -26,6 +28,7 @@ export const ICON_COMPONENTS = {
   [ICON_NAMES.logo]: Logo,
   [ICON_NAMES.menu]: MenuIcon,
   [ICON_NAMES.cancel]: CancelIcon,
+  [ICON_NAMES.google]: GoogleIcon,
   [ICON_NAMES.search]: SearchIcon,
   [ICON_NAMES.home]: HomeIcon,
   [ICON_NAMES.project]: ProjectIcon,
