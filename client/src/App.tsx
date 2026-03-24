@@ -1,26 +1,22 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Route, Routes } from "react-router-dom";
+
 import "./App.css";
 import { Home } from "./pages/home";
 import { Login } from "./pages/login";
+import { Register } from "./pages/register";
 import { ROUTES } from "./routes";
 
+const queryClient = new QueryClient();
+
 function App() {
-  const queryClient = new QueryClient();
-  const pathname = window.location.pathname;
-
-  const page = (() => {
-    switch (pathname) {
-      case ROUTES.LOGIN:
-        return <Login />;
-      case ROUTES.HOME:
-      default:
-        return <Home />;
-    }
-  })();
-
   return (
     <QueryClientProvider client={queryClient}>
-      {page}
+      <Routes>
+        <Route path={ROUTES.HOME} element={<Home />} />
+        <Route path={ROUTES.LOGIN} element={<Login />} />
+        <Route path={ROUTES.REGISTER} element={<Register />} />
+      </Routes>
     </QueryClientProvider>
   );
 }
