@@ -3,4 +3,4 @@ import { authRoute } from "./auth";
 
 export const apiRouter = Router();
 
-apiRouter.use("/register", authRoute);
+apiRouter.use("/auth", authRoute);
