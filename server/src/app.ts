@@ -18,6 +18,7 @@ export function createApp() {
     }),
   );
   app.use(helmet());
+  // TODO: After having users, limit it to per user, not per IP
   app.use(
     rateLimit({
       windowMs: 15 * 60 * 1000,
